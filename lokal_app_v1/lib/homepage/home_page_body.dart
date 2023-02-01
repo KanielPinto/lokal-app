@@ -71,7 +71,7 @@ class _HomePageBodyState extends State<HomePageBody> {
             children: [
               HeaderText(
                 text: "Popular",
-                size: Dimensions.font20,
+                size: Dimensions.font20 * 1.2,
                 color: AppColors.mainColor,
               )
             ],
