@@ -8,6 +8,7 @@ import 'package:lokal_app_v1/utils/colors.dart';
 import 'package:lokal_app_v1/utils/dimensions.dart';
 import 'package:lokal_app_v1/widgets/header_text.dart';
 import 'package:lokal_app_v1/widgets/iconplustext.dart';
+import 'package:lokal_app_v1/widgets/infoDrawer.dart';
 import 'package:lokal_app_v1/widgets/subtitle_text.dart';
 import 'package:dots_indicator/dots_indicator.dart';
 
@@ -239,68 +240,8 @@ class _HomePageBodyState extends State<HomePageBody> {
                     top: Dimensions.height15,
                     left: Dimensions.width15,
                     right: Dimensions.width15),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    HeaderText(text: "Featured Store"),
-                    SizedBox(
-                      height: Dimensions.height10,
-                    ),
-                    Row(
-                      children: [
-                        Wrap(
-                          children: [
-                            ...List.generate(
-                                5,
-                                (index) => Icon(
-                                      Icons.star,
-                                      color: AppColors.mainColor,
-                                      size: 15,
-                                    )),
-                          ],
-                        ),
-                        SizedBox(
-                          width: Dimensions.width10,
-                        ),
-                        SubtitleText(text: "4.5"),
-                        SizedBox(
-                          width: Dimensions.width10,
-                        ),
-                        //   SubtitleText(text: "1287"),
-                        //   SizedBox(
-                        //     width: Dimensions.width10,
-                        //   ),
-                        //   SubtitleText(text: "comments"),
-                        //
-                      ],
-                    ),
-                    SizedBox(
-                      height: Dimensions.height20,
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        IconPlusText(
-                            icon: Icons.circle_sharp,
-                            text: "Category",
-                            iconColor: AppColors.iconColor1),
-                        SizedBox(
-                          width: Dimensions.width10,
-                        ),
-                        IconPlusText(
-                            icon: Icons.location_on,
-                            text: "Location",
-                            iconColor: AppColors.mainColor),
-                        SizedBox(
-                          width: Dimensions.width10,
-                        ),
-                        IconPlusText(
-                            icon: Icons.delivery_dining_outlined,
-                            text: "Delivery",
-                            iconColor: AppColors.iconColor2)
-                      ],
-                    ),
-                  ],
+                child: InfoDrawer(
+                  text: "Featured Store",
                 ),
               ),
             ),
