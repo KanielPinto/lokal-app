@@ -2,7 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:lokal_app_v1/homepage/main_store.dart';
+import 'package:lokal_app_v1/pages/homepage/main_store.dart';
+import 'package:lokal_app_v1/pages/store/popular_store.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       darkTheme: ThemeData.dark(),
-      home: MainStore(),
+      home: PopularStore(),
     );
   }
 }
