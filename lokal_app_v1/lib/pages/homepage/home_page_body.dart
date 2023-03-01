@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -61,7 +61,7 @@ class _HomePageBodyState extends State<HomePageBody> {
           decorator: DotsDecorator(activeColor: AppColors.mainColor),
         ),
 
-        //Popular text
+        // //Popular text
         SizedBox(
           height: Dimensions.height30,
         ),
@@ -102,7 +102,7 @@ class _HomePageBodyState extends State<HomePageBody> {
                           color: Colors.white38,
                           image: DecorationImage(
                             fit: BoxFit.cover,
-                            image: AssetImage("assets/image/food0.png"),
+                            image: AssetImage("assets/image/store0.jpg"),
                           ),
                         )),
 
@@ -220,7 +220,7 @@ class _HomePageBodyState extends State<HomePageBody> {
                 color: index.isEven ? Color(0xFF69c5df) : Color(0xFF9294cc),
                 image: DecorationImage(
                     fit: BoxFit.cover,
-                    image: AssetImage("assets/image/food0.png"))),
+                    image: AssetImage("assets/image/store0.jpg"))),
           ),
           Align(
             alignment: Alignment.bottomCenter,
