@@ -42,4 +42,7 @@ class Dimensions {
 
   //popular store
   static double popularStoreImgSize = screenHeight / 2.41;
+
+  //bottom height
+  static double bottomHeightBar = screenHeight / 7.03;
 }
