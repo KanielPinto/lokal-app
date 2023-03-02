@@ -36,11 +36,13 @@ class _MainStoreState extends State<MainStore> {
               children: [
                 Column(
                   children: [
-                    HeaderText(
-                      text: "Loकal",
-                      color: AppColors.mainColor,
-                      size: Dimensions.font20 * 1.5,
-                    ),
+                    Container(
+                      child: Image(
+                        image: AssetImage("assets/image/local-white.png"),
+                        height: 40,
+                        width: 4 * 23.14,
+                      ),
+                    )
                   ],
                 ),
                 ElevatedButton(

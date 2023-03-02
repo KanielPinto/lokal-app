@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       darkTheme: ThemeData.dark(),
-      home: PopularStore(),
+      home: MainStore(),
     );
   }
 }
