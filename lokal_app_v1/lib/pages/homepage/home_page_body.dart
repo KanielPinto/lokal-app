@@ -40,6 +40,7 @@ class _HomePageBodyState extends State<HomePageBody> {
 
   @override
   void dispose() {
+    super.dispose();
     pageController.dispose();
   }
 
@@ -93,83 +94,90 @@ class _HomePageBodyState extends State<HomePageBody> {
             shrinkWrap: true,
             itemCount: 10,
             itemBuilder: (context, index) {
-              return Container(
-                margin: EdgeInsets.only(
-                    left: Dimensions.width20,
-                    right: Dimensions.width20,
-                    bottom: Dimensions.height10),
-                child: Row(
-                  children: [
-                    //image container
-                    Container(
-                        width: Dimensions.listViewImgSize,
-                        height: Dimensions.listViewImgSize,
-                        decoration: BoxDecoration(
-                          borderRadius:
-                              BorderRadius.circular(Dimensions.radius20),
-                          color: Colors.white38,
-                          image: DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage("assets/image/store0.jpg"),
-                          ),
-                        )),
-
-                    //text container
-                    Expanded(
-                      child: Container(
-                        height: Dimensions.listViewTxtContainerSize,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.only(
-                              topRight: Radius.circular(Dimensions.radius20),
-                              bottomRight: Radius.circular(Dimensions.radius20),
+              return GestureDetector(
+                onTap: () {
+                  Get.toNamed(RouteHelper.getPopularStore());
+                },
+                child: Container(
+                  margin: EdgeInsets.only(
+                      left: Dimensions.width20,
+                      right: Dimensions.width20,
+                      bottom: Dimensions.height10),
+                  child: Row(
+                    children: [
+                      //image container
+                      Container(
+                          width: Dimensions.listViewImgSize,
+                          height: Dimensions.listViewImgSize,
+                          decoration: BoxDecoration(
+                            borderRadius:
+                                BorderRadius.circular(Dimensions.radius20),
+                            color: Colors.white38,
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage("assets/image/store0.jpg"),
                             ),
-                            color: Colors.white),
-                        child: Padding(
-                          padding: EdgeInsets.only(
-                              left: Dimensions.width10,
-                              right: Dimensions.width10),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              HeaderText(text: "Name of Shop 1"),
-                              SizedBox(
-                                height: Dimensions.height10,
+                          )),
+
+                      //text container
+                      Expanded(
+                        child: Container(
+                          height: Dimensions.listViewTxtContainerSize,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                topRight: Radius.circular(Dimensions.radius20),
+                                bottomRight:
+                                    Radius.circular(Dimensions.radius20),
                               ),
-                              SubtitleText(text: "1 Line Description of shop"),
-                              SizedBox(
-                                height: Dimensions.height10,
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceEvenly,
-                                children: [
-                                  IconPlusText(
-                                      icon: Icons.circle_sharp,
-                                      text: "Category",
-                                      iconColor: AppColors.iconColor1),
-                                  SizedBox(
-                                    width: Dimensions.width10,
-                                  ),
-                                  IconPlusText(
-                                      icon: Icons.location_on,
-                                      text: "Location",
-                                      iconColor: AppColors.mainColor),
-                                  SizedBox(
-                                    width: Dimensions.width10,
-                                  ),
-                                  IconPlusText(
-                                      icon: Icons.delivery_dining_outlined,
-                                      text: "",
-                                      iconColor: AppColors.iconColor2)
-                                ],
-                              )
-                            ],
+                              color: Colors.white),
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                                left: Dimensions.width10,
+                                right: Dimensions.width10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                HeaderText(text: "Name of Shop 1"),
+                                SizedBox(
+                                  height: Dimensions.height10,
+                                ),
+                                SubtitleText(
+                                    text: "1 Line Description of shop"),
+                                SizedBox(
+                                  height: Dimensions.height10,
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    IconPlusText(
+                                        icon: Icons.circle_sharp,
+                                        text: "Category",
+                                        iconColor: AppColors.iconColor1),
+                                    SizedBox(
+                                      width: Dimensions.width10,
+                                    ),
+                                    IconPlusText(
+                                        icon: Icons.location_on,
+                                        text: "Location",
+                                        iconColor: AppColors.mainColor),
+                                    SizedBox(
+                                      width: Dimensions.width10,
+                                    ),
+                                    IconPlusText(
+                                        icon: Icons.delivery_dining_outlined,
+                                        text: "",
+                                        iconColor: AppColors.iconColor2)
+                                  ],
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               );
             }),

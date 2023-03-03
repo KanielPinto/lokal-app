@@ -1,4 +1,5 @@
 import 'package:get/route_manager.dart';
+import 'package:lokal_app_v1/pages/homepage/home_page.dart';
 import 'package:lokal_app_v1/pages/homepage/main_store.dart';
 import 'package:lokal_app_v1/pages/splash/splash_page.dart';
 import 'package:lokal_app_v1/pages/store/popular_store.dart';
@@ -14,7 +15,8 @@ class RouteHelper {
 
   static List<GetPage> routes = [
     GetPage(name: splashPage, page: () => SplashScreen()),
-    GetPage(name: "/", page: () => MainStore(), transition: Transition.native),
+    GetPage(
+        name: "/", page: () => HomePage(), transition: Transition.leftToRight),
     GetPage(
         name: popularStore,
         page: () => PopularStore(),
