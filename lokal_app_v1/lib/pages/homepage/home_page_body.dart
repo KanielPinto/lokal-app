@@ -138,12 +138,11 @@ class _HomePageBodyState extends State<HomePageBody> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                HeaderText(text: "Name of Shop 1"),
+                                HeaderText(text: "Name of Shop"),
                                 SizedBox(
                                   height: Dimensions.height10,
                                 ),
-                                SubtitleText(
-                                    text: "1 Line Description of shop"),
+                                SubtitleText(text: "Description of Shop"),
                                 SizedBox(
                                   height: Dimensions.height10,
                                 ),
