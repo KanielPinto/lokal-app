@@ -3,6 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:lokal_app_v1/routes/route_helper.dart';
 import 'package:lokal_app_v1/utils/colors.dart';
 import 'package:lokal_app_v1/utils/dimensions.dart';
 import 'package:lokal_app_v1/widgets/app_icon.dart';
@@ -41,7 +44,11 @@ class PopularStore extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  AppIcon(icon: Icons.arrow_back_rounded),
+                  GestureDetector(
+                      onTap: (() {
+                        Get.toNamed(RouteHelper.getInitial());
+                      }),
+                      child: AppIcon(icon: Icons.arrow_back_rounded)),
                   AppIcon(icon: Icons.shopping_cart_outlined),
                 ],
               )),

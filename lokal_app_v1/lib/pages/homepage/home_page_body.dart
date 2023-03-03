@@ -4,6 +4,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:get/route_manager.dart';
+import 'package:lokal_app_v1/pages/store/popular_store.dart';
+import 'package:lokal_app_v1/routes/route_helper.dart';
 import 'package:lokal_app_v1/utils/colors.dart';
 import 'package:lokal_app_v1/utils/dimensions.dart';
 import 'package:lokal_app_v1/widgets/header_text.dart';
@@ -48,12 +51,17 @@ class _HomePageBodyState extends State<HomePageBody> {
         Container(
             //color: Colors.redAccent,
             height: Dimensions.pageView,
-            child: PageView.builder(
-                controller: pageController,
-                itemCount: 5,
-                itemBuilder: (context, position) {
-                  return _buildPageItem(position);
-                })),
+            child: GestureDetector(
+              onTap: () {
+                Get.toNamed(RouteHelper.getPopularStore());
+              },
+              child: PageView.builder(
+                  controller: pageController,
+                  itemCount: 5,
+                  itemBuilder: (context, position) {
+                    return _buildPageItem(position);
+                  }),
+            )),
         //dots
         DotsIndicator(
           dotsCount: 5,
@@ -73,7 +81,7 @@ class _HomePageBodyState extends State<HomePageBody> {
               HeaderText(
                 text: "Popular",
                 size: Dimensions.font20 * 1.15,
-                color: AppColors.mainColor,
+                color: AppColors.pinkColor,
               )
             ],
           ),
