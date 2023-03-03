@@ -6,8 +6,11 @@ import 'package:lokal_app_v1/pages/homepage/main_store.dart';
 import 'package:lokal_app_v1/pages/splash/splash_page.dart';
 import 'package:lokal_app_v1/pages/store/popular_store.dart';
 import 'package:lokal_app_v1/routes/route_helper.dart';
+import 'package:lokal_app_v1/auxiliary/dependencies.dart' as dep;
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await dep.init;
   runApp(const MyApp());
 }
 

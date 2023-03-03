@@ -42,14 +42,13 @@ class PopularStore extends StatelessWidget {
               left: Dimensions.width20,
               right: Dimensions.width20,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   GestureDetector(
                       onTap: (() {
                         Get.toNamed(RouteHelper.getInitial());
                       }),
                       child: AppIcon(icon: Icons.arrow_back_rounded)),
-                  AppIcon(icon: Icons.shopping_cart_outlined),
                 ],
               )),
           //Store Info
