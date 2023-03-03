@@ -24,6 +24,8 @@ class MyApp extends StatelessWidget {
       //home: MainStore(),
       initialRoute: RouteHelper.getSplashPage(),
       getPages: RouteHelper.routes,
+
+      //1.51 timestamp part 2
     );
   }
 }

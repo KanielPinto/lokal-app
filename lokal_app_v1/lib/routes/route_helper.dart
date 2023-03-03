@@ -14,7 +14,10 @@ class RouteHelper {
 
   static List<GetPage> routes = [
     GetPage(name: splashPage, page: () => SplashScreen()),
-    GetPage(name: "/", page: () => MainStore()),
-    GetPage(name: popularStore, page: () => PopularStore()),
+    GetPage(name: "/", page: () => MainStore(), transition: Transition.native),
+    GetPage(
+        name: popularStore,
+        page: () => PopularStore(),
+        transition: Transition.rightToLeftWithFade),
   ];
 }
