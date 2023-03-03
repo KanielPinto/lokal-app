@@ -9,17 +9,21 @@ class RouteHelper {
   static const String initial = '/';
   static const String popularStore = "/popular-store";
 
-  static String getPopularStore() => '$popularStore';
-  static String getSplashPage() => '$splashPage';
-  static String getInitial() => '$initial';
+  static String getPopularStore() => popularStore;
+  static String getSplashPage() => splashPage;
+  static String getInitial() => initial;
 
   static List<GetPage> routes = [
-    GetPage(name: splashPage, page: () => SplashScreen()),
+    GetPage(name: splashPage, page: () => const SplashScreen()),
     GetPage(
-        name: "/", page: () => HomePage(), transition: Transition.leftToRight),
+      name: "/",
+      transition: Transition.leftToRight,
+      page: () => const HomePage(),
+    ),
     GetPage(
-        name: popularStore,
-        page: () => PopularStore(),
-        transition: Transition.rightToLeftWithFade),
+      name: popularStore,
+      transition: Transition.rightToLeftWithFade,
+      page: () => const PopularStore(),
+    ),
   ];
 }

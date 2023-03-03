@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:lokal_app_v1/pages/homepage/main_store.dart';
 import 'package:lokal_app_v1/pages/splash/splash_page.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
+
       darkTheme: ThemeData.dark(),
       //home: MainStore(),
       initialRoute: RouteHelper.getSplashPage(),
