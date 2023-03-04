@@ -1,31 +1,26 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:lokal_app_v1/pages/homepage/home_page.dart';
 import 'package:lokal_app_v1/utils/colors.dart';
 import 'package:lokal_app_v1/utils/dimensions.dart';
-import 'package:lokal_app_v1/widgets/header_text.dart';
-import 'package:lokal_app_v1/widgets/subtitle_text.dart';
 
-import 'home_page_body.dart';
+import 'bookmarks_page_body.dart';
 
-class MainStore extends StatefulWidget {
-  const MainStore({super.key});
+class BookmarksPage extends StatefulWidget {
+  const BookmarksPage({super.key});
 
   @override
-  State<MainStore> createState() => _MainStoreState();
+  State<BookmarksPage> createState() => _BookmarksPageState();
 }
 
-class _MainStoreState extends State<MainStore> {
+class _BookmarksPageState extends State<BookmarksPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Column(
         children: [
-          // ignore: avoid_unnecessary_containers
           Container(
             child: Container(
               margin: EdgeInsets.only(
@@ -63,7 +58,7 @@ class _MainStoreState extends State<MainStore> {
           ),
           Expanded(
               child: SingleChildScrollView(
-            child: HomePageBody(),
+            child: BookmarksPageBody(),
           )),
         ],
       ),
