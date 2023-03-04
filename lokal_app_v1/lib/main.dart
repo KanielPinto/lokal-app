@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:lokal_app_v1/pages/homepage/home_page.dart';
 import 'package:lokal_app_v1/pages/homepage/main_store.dart';
 import 'package:lokal_app_v1/pages/splash/splash_page.dart';
 import 'package:lokal_app_v1/pages/store/popular_store.dart';
